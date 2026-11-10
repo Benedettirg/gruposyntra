@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Grupo Syntra — Soluciones Digitales</title>
+<meta name="description" content="Páginas web, tiendas Shopify, edición de video, contenido con IA y desarrollo a medida. Grupo Syntra: diseño, desarrollo, contenido y tecnología.">
+<meta name="theme-color" content="#030812">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="progress" id="progress"></div>
+<canvas id="bg" aria-hidden="true"></canvas>
+<div class="noise" aria-hidden="true"></div>
+
+<!-- SVG defs -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <linearGradient id="gManta" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff"/><stop offset=".45" stop-color="#9fe7ff"/><stop offset="1" stop-color="#1b8bff"/>
+    </linearGradient>
+    <linearGradient id="gMantaDark" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#00d4ff"/><stop offset="1" stop-color="#0a2a7a"/>
+    </linearGradient>
+  </defs>
+</svg>
+
+<header class="nav" id="nav">
+  <a href="#inicio" class="brand" aria-label="Grupo Syntra">
+    <svg class="brand-ray" viewBox="0 0 400 240"><use href="#manta"/></svg>
+    <span class="brand-txt"><small>GRUPO</small><b>SYNTRA</b></span>
+  </a>
+  <nav class="links" id="links">
+    <a href="#servicios">Servicios</a>
+    <a href="#pack">Pack</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#proceso">Proceso</a>
+    <a href="#contacto" class="btn btn-sm magnetic">Contacto</a>
+  </nav>
+  <button class="burger" id="burger" aria-label="Menú"><span></span><span></span></button>
+</header>
+
+<!-- Manta symbol -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="manta" viewBox="0 0 400 240">
+    <path d="M200 20C232 66 306 92 392 78 340 124 282 152 216 154L200 236 184 154C118 152 60 124 8 78 94 92 168 66 200 20Z" fill="url(#gManta)"/>
+    <path d="M200 20C214 66 214 112 200 154 186 112 186 66 200 20Z" fill="url(#gMantaDark)" opacity=".55"/>
+    <path d="M60 86C120 100 170 92 200 60" stroke="#fff" stroke-opacity=".6" stroke-width="2" fill="none"/>
+    <path d="M340 86C280 100 230 92 200 60" stroke="#fff" stroke-opacity=".6" stroke-width="2" fill="none"/>
+  </symbol>
+</svg>
+
+<main>
+<!-- HERO -->
+<section class="hero" id="inicio">
+  <div class="hero-grid">
+    <div class="hero-copy">
+      <p class="tag reveal"><i></i> Diseño · Desarrollo · Contenido · Tecnología</p>
+      <h1 class="reveal">
+        <span class="line">Llevamos tu</span>
+        <span class="line">negocio a <em class="grad" id="rot">internet</em></span>
+      </h1>
+      <p class="lead reveal">Soluciones digitales profesionales, rápidas y a tu medida. Páginas web, tiendas online, video, contenido con IA y sistemas que venden por vos.</p>
+      <div class="cta reveal">
+        <a href="#contacto" class="btn magnetic">Solicitar propuesta <span class="arr">→</span></a>
+        <a href="#portfolio" class="btn ghost magnetic">Ver trabajos</a>
+      </div>
+      <ul class="trust reveal">
+        <li><b data-count="48">0</b>h entrega express</li>
+        <li><b data-count="100" data-suffix="%">0</b>a tu medida</li>
+        <li><b data-count="24" data-suffix="/7">0</b>soporte</li>
+      </ul>
+    </div>
+
+    <div class="hero-visual" id="heroVisual">
+      <div class="glow-orb"></div>
+      <svg class="manta-hero" id="mantaFallback" viewBox="0 0 400 240"><use href="#manta"/></svg>
+      <canvas id="manta3d" aria-label="Mantarraya 3D"></canvas>
+      <div class="ring r1"></div><div class="ring r2"></div><div class="ring r3"></div>
+
+      <div class="device laptop">
+        <div class="bar"><i></i><i></i><i></i></div>
+        <div class="scr">
+          <b>Tu negocio<br>en <span class="grad">Internet</span></b>
+          <small>Páginas web, tiendas online y soluciones digitales a medida.</small>
+          <span class="mini-btn">Solicitar Propuesta →</span>
+          <svg viewBox="0 0 400 240"><use href="#manta"/></svg>
+        </div>
+      </div>
+      <div class="device phone">
+        <svg viewBox="0 0 400 240"><use href="#manta"/></svg><b>SYNTRA</b>
+      </div>
+      <div class="chip c1">⚡ Entrega rápida</div>
+      <div class="chip c2">🛒 Shopify</div>
+      <div class="chip c3">🤖 Contenido IA</div>
+      <div class="chip c4">🎬 UGC &amp; Brolls</div>
+    </div>
+  </div>
+  <a href="#servicios" class="scroll-hint" aria-label="Bajar"><span></span></a>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee" aria-hidden="true">
+  <div class="track">
+    <span>DISEÑO WEB</span><span>✦</span><span>SHOPIFY</span><span>✦</span><span>EDICIÓN DE VIDEO</span><span>✦</span><span>CONTENIDO CON IA</span><span>✦</span><span>DESARROLLO A MEDIDA</span><span>✦</span><span>UGC</span><span>✦</span><span>BROLLS</span><span>✦</span>
+    <span>DISEÑO WEB</span><span>✦</span><span>SHOPIFY</span><span>✦</span><span>EDICIÓN DE VIDEO</span><span>✦</span><span>CONTENIDO CON IA</span><span>✦</span><span>DESARROLLO A MEDIDA</span><span>✦</span><span>UGC</span><span>✦</span><span>BROLLS</span><span>✦</span>
+  </div>
+</div>
+
+<!-- SERVICIOS -->
+<section class="sec" id="servicios">
+  <div class="head reveal">
+    <p class="eyebrow">/ Nuestros servicios</p>
+    <h2>Todo lo que tu marca necesita<br>para <span class="grad">crecer online</span></h2>
+  </div>
+  <div class="cards">
+    <article class="card tilt reveal">
+      <div class="ico"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4M10 8l-2 2 2 2M14 8l2 2-2 2"/></svg></div>
+      <h3>Landing / Shopify</h3><p>Presencia profesional y efectiva, rápida y optimizada para convertir.</p>
+      <div class="price"><small>PRECIO</small><b>$37.500</b></div>
+    </article>
+    <article class="card tilt reveal">
+      <div class="ico"><svg viewBox="0 0 24 24"><path d="M6 8h12l-1 12H7L6 8z"/><path d="M9 8a3 3 0 016 0"/></svg></div>
+      <h3>Tienda Online / Shopify</h3><p>Tu tienda lista para vender: catálogo, pagos y envíos configurados.</p>
+      <div class="price"><small>PRECIO</small><b>$75.000</b></div>
+    </article>
+    <article class="card tilt reveal">
+      <div class="ico"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M10 9l5 3-5 3V9z"/></svg></div>
+      <h3>Edición de Video</h3><p>Brolls cinemáticos, UGC, reels y contenido para redes. Todos los formatos de video.</p>
+      <div class="price"><small>BROLLS</small><b>$6.500</b></div>
+    </article>
+    <article class="card tilt reveal">
+      <div class="ico"><svg viewBox="0 0 24 24"><rect x="5" y="8" width="14" height="11" rx="3"/><path d="M12 4v4M9 13h.01M15 13h.01M9 16h6"/></svg></div>
+      <h3>Contenido con IA</h3><p>Imágenes, videos y productos creativos generados con inteligencia artificial.</p>
+      <div class="price"><small>UGC CON IA</small><b>$8.000</b></div>
+    </article>
+    <article class="card tilt reveal">
+      <div class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2"/></svg></div>
+      <h3>Desarrollo a Medida</h3><p>Apps, sistemas y automatizaciones hechas exactamente para tu negocio.</p>
+      <div class="price"><small>PRECIO</small><b>A cotizar</b></div>
+    </article>
+    <article class="card tilt reveal card-cta">
+      <h3>¿Tenés otra idea?</h3><p>Contanos qué necesitás y armamos una propuesta a tu medida.</p>
+      <a href="#contacto" class="btn magnetic">Hablemos <span class="arr">→</span></a>
+    </article>
+  </div>
+</section>
+
+<!-- PACK -->
+<section class="sec" id="pack">
+  <div class="pack reveal">
+    <div class="pack-left">
+      <span class="badge">★ Pack especial</span>
+      <h2>PACK <span class="grad">1</span><br>1 Landing + 5 Creativos</h2>
+      <ul class="checks"><li>1 Landing profesional</li><li>5 Creativos (Brolls, UGC con IA, IA Producto)</li><li>Todos los formatos de video</li></ul>
+      <p class="fast">⚡ Tiempo de entrega <b>rápido</b></p>
+    </div>
+    <div class="pack-right">
+      <div class="crown">♛</div>
+      <div class="big">$<span data-count="65000" data-sep="1">0</span></div>
+      <a href="#contacto" class="btn magnetic" data-pack="Pack 1 (1 Landing + 5 Creativos)">Quiero este pack <span class="arr">→</span></a>
+    </div>
+  </div>
+  <div class="pack reveal">
+    <div class="pack-left">
+      <span class="badge">★ Pack especial</span>
+      <h2>PACK <span class="grad">2</span><br>2 Landings + 10 Creativos</h2>
+      <ul class="checks"><li>2 Landings profesionales</li><li>10 Creativos (Brolls, UGC con IA, IA Producto)</li><li>Todos los formatos de video</li></ul>
+      <p class="fast">⚡ Tiempo de entrega <b>rápido</b></p>
+    </div>
+    <div class="pack-right">
+      <div class="crown">♛</div>
+      <div class="big">$<span data-count="120000" data-sep="1">0</span></div>
+      <span class="save">Más elegido</span>
+      <a href="#contacto" class="btn magnetic" data-pack="Pack 2 (2 Landings + 10 Creativos)">Quiero este pack <span class="arr">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- PORTFOLIO -->
+<section class="sec" id="portfolio">
+  <div class="head reveal">
+    <p class="eyebrow">/ Portfolio</p>
+    <h2>Ideas que se ven, se mueven<br>y <span class="grad">venden</span></h2>
+  </div>
+  <div class="filters reveal" id="filters">
+    <button class="on" data-f="all">Todo</button>
+    <button data-f="web">Web</button>
+    <button data-f="shop">Tiendas</button>
+    <button data-f="video">Video</button>
+    <button data-f="ia">IA</button>
+  </div>
+  <div class="work" id="work">
+    <a href="#contacto" class="w tilt" data-c="web"><div class="shot s1"><div class="mock"><i></i><i></i><i></i><b></b><b></b><b class="s"></b></div></div><div class="meta"><span>Web · Landing</span><h4>Landing Gastronomía</h4></div></a>
+    <a href="#contacto" class="w tilt" data-c="shop"><div class="shot s2"><div class="mock grid"><u></u><u></u><u></u><u></u></div></div><div class="meta"><span>Shopify</span><h4>Tienda de Moda</h4></div></a>
+    <a href="#contacto" class="w tilt" data-c="video"><div class="shot s3"><div class="play"></div><div class="tl"><i></i><i></i><i></i><i></i><i></i></div></div><div class="meta"><span>Video · Reels</span><h4>Brolls Cinematográficos</h4></div></a>
+    <a href="#contacto" class="w tilt" data-c="ia"><div class="shot s4"><div class="orb"></div><div class="orb o2"></div></div><div class="meta"><span>IA · Producto</span><h4>Imágenes de Producto IA</h4></div></a>
+    <a href="#contacto" class="w tilt" data-c="web"><div class="shot s5"><div class="mock"><i></i><i></i><i></i><b></b><b class="s"></b><b></b></div></div><div class="meta"><span>Desarrollo</span><h4>Sistema de Turnos</h4></div></a>
+    <a href="#contacto" class="w tilt" data-c="ia"><div class="shot s6"><div class="play"></div><div class="tl"><i></i><i></i><i></i><i></i><i></i></div></div><div class="meta"><span>UGC con IA</span><h4>UGC Cosmética</h4></div></a>
+  </div>
+  <p class="note reveal">* Proyectos de muestra conceptuales. Pedinos ejemplos reales por WhatsApp.</p>
+</section>
+
+<!-- PROCESO -->
+<section class="sec" id="proceso">
+  <div class="head reveal">
+    <p class="eyebrow">/ Cómo trabajamos</p>
+    <h2>De la idea al <span class="grad">lanzamiento</span> en 4 pasos</h2>
+  </div>
+  <div class="steps">
+    <div class="step reveal"><span>01</span><h4>Consulta</h4><p>Hablamos por WhatsApp, entendemos tu negocio y tus objetivos.</p></div>
+    <div class="step reveal"><span>02</span><h4>Propuesta</h4><p>Te enviamos presupuesto claro y tiempos de entrega.</p></div>
+    <div class="step reveal"><span>03</span><h4>Creación</h4><p>Diseñamos, desarrollamos y editamos con revisiones a tu medida.</p></div>
+    <div class="step reveal"><span>04</span><h4>Lanzamiento</h4><p>Publicamos y te acompañamos con soporte y ajustes.</p></div>
+  </div>
+</section>
+
+<!-- VALORES -->
+<section class="values">
+  <div class="v reveal"><svg viewBox="0 0 24 24"><path d="M5 19c0-8 6-14 15-14 0 9-6 15-14 15M9 15l-4 4M13 6l5 5"/></svg><b>Impulsá tus ventas</b></div>
+  <div class="v reveal"><svg viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6l8-3zM8.5 12l2.5 2.5 4.5-5"/></svg><b>Calidad de agencia</b></div>
+  <div class="v reveal"><svg viewBox="0 0 24 24"><path d="M3 12l9-9h9v9l-9 9-9-9zM16 8h.01"/></svg><b>Precios competitivos</b></div>
+  <div class="v reveal"><svg viewBox="0 0 24 24"><path d="M4 14v-2a8 8 0 0116 0v2M4 14h3v5H5a1 1 0 01-1-1v-4zM20 14h-3v5h2a1 1 0 001-1v-4zM17 19c0 2-2 2-5 2"/></svg><b>Soporte personalizado</b></div>
+</section>
+
+<!-- CONTACTO -->
+<section class="sec contact" id="contacto">
+  <div class="cbox reveal">
+    <div class="cl">
+      <p class="eyebrow">/ Contacto</p>
+      <h2>¡Contactanos <span class="grad">hoy!</span></h2>
+      <p class="sub">Contanos tu idea y en minutos te respondemos con una propuesta.</p>
+      <a class="big-wa magnetic" href="https://wa.me/5493446698000" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 3a9 9 0 00-7.7 13.6L3 21l4.5-1.2A9 9 0 1012 3zM8.5 8.5c.3 3 2.7 5.4 5.9 6.1l1.2-1.3-1.9-.9-.8.7c-1.2-.5-2-1.4-2.4-2.4l.8-.7-.9-1.9-1.9.4z"/></svg>3446 698000</a>
+      <a class="insta magnetic" href="https://instagram.com/grupo_syntra" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8"/></svg>@grupo_syntra</a>
+      <p class="soon">🌐 Próximamente: grupo-syntra.com</p>
+    </div>
+    <form class="cf" id="form">
+      <label>Nombre<input name="n" required placeholder="Tu nombre"></label>
+      <label>Servicio
+        <select name="s" id="svc">
+          <option>Página Web / Landing</option><option>Tienda Online (Shopify)</option><option>Edición de Video</option><option>Contenido con IA</option><option>Desarrollo a Medida</option><option>Pack 1 (1 Landing + 5 Creativos)</option><option>Pack 1 (1 Landing + 5 Creativos)</option><option>Pack 2 (2 Landings + 10 Creativos)</option>
+        </select>
+      </label>
+      <label>Tu idea<textarea name="m" rows="4" placeholder="Contanos brevemente qué necesitás..."></textarea></label>
+      <button class="btn magnetic" type="submit">Enviar por WhatsApp <span class="arr">→</span></button>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="foot-ray"><svg viewBox="0 0 400 240"><use href="#manta"/></svg></div>
+  <p>G R U P O &nbsp; S Y N T R A</p>
+  <small>© <span id="yr"></span> Grupo Syntra · Soluciones Digitales</small>
+</footer>
+
+<a class="wa-float magnetic" href="https://wa.me/5493446698000" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M12 3a9 9 0 00-7.7 13.6L3 21l4.5-1.2A9 9 0 1012 3zM8.5 8.5c.3 3 2.7 5.4 5.9 6.1l1.2-1.3-1.9-.9-.8.7c-1.2-.5-2-1.4-2.4-2.4l.8-.7-.9-1.9-1.9.4z"/></svg></a>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="script.js"></script>
+<script src="manta3d.js"></script>
+</body>
+</html>
